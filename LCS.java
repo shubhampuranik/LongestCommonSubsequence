@@ -4,12 +4,6 @@ import java.io.FileInputStream;
 import java.util.Base64;
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author Shubham
@@ -39,35 +33,8 @@ public class LCS {
         displayC();
         System.out.println();
         printLCS(a.length-1,b.length-1);
-        /*
-        try{
-            File f=new File("C:\\pmi1.jpg");
-            byte[] picData=new byte[(int)f.length()];
-            FileInputStream fis=new FileInputStream(f);
-            fis.read(picData);
-            String A[]=new String(Base64.getEncoder().encode(picData)).split("0");
-            System.out.println("Length1="+A.length);
-            
-            File f1=new File("C:\\pmi2.jpg");
-            byte[] picData1=new byte[(int)f1.length()];
-            FileInputStream fis1=new FileInputStream(f);
-            fis1.read(picData1);
-            String B[]=new String(Base64.getEncoder().encode(picData1)).split("0");
-            System.out.println("Length2="+B.length);
-            
-            //System.out.println(A);
-            //System.out.println(B);
-            
-            lcs(A[0],B[0]);
-            
-        }catch(Exception e){
-            System.out.println(e);
-        }
-                */
     }
     void lcs(String A,String B) {
-        //a=("0"+A).toCharArray();
-        //b=("0"+B).toCharArray();
         a=(A).toCharArray();
         b=(B).toCharArray();
         c=new Cell[a.length][b.length];
@@ -77,9 +44,6 @@ public class LCS {
             }
         } 
         lcs();
-        //displayC();
-        //System.out.println();
-        //printLCS(a.length-1,b.length-1);
         System.out.println("Length1="+A.length()+" Length2="+B.length());
         System.out.println("LCS length="+c[a.length-1][b.length-1].value);
     }
